@@ -12,6 +12,6 @@
 #define FOSC 18432000
 #define BAUD 115200
 #define T2VALUE (65536-(FOSC/BAUD/4))
-void uart1_init(void);
-
+void uart2_init(void);
+void uart
 #endif

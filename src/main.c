@@ -9,7 +9,7 @@
 
 
 #include "STC15.h"
-#include "uart1.h"
+#include "uart.h"
 
 void main(void)
 {
