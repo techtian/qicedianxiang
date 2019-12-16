@@ -5,13 +5,21 @@
 /*
 /*最后修改日期：
 /***********************************************************/
-#ifndef __uart1_h__
-#define __uart1_h__
+#ifndef __uart_h__
+#define __uart_h__
 
 
 #define FOSC 18432000
 #define BAUD 115200
 #define T2VALUE (65536-(FOSC/BAUD/4))
+
+void T2_init(void);
+void uart1_init(void);
 void uart2_init(void);
-void uart
+void uart3_intt(void);
+void uart4_init(void);
+void putc(unsigned char );
+void puts(unsigned char *);
+void mputc(unsigned char);
+void mputs(unsigned char *);
 #endif
