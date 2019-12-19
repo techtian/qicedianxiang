@@ -11,21 +11,26 @@
 #include "STC15.h"
 #include "uart.h"
 #include "system.h"
+#include "stdio.h"
+
 void main(void)
 {
+		int  a=12;
     T2_init();
-    //uart1_init();
+    uart1_init();
     uart2_init();
+	//	char  asdf;
+	
     while(1)
     {
-        mputc(0x76);
-    //    puts("asdfasdf");
+
 #ifdef __debug
 			if(P55==1)
 			{P55=0;}
 			else
 			{P55=1;}
-        delayms(50);
+		//	printf("asdfasdf");
 #endif
+    delayms(50);
     }
 }
