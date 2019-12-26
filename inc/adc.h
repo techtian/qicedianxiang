@@ -1,5 +1,5 @@
 /***************力邦测控（洛阳）有限公司**********************/
-/*文件功能：SPI&ADC
+/*文件功能：头文件——SPI&ADC
 /*作者：田世通
 /*创建日期日期：2019-12-17
 /*
@@ -16,7 +16,9 @@
 #define ADIN2       0x08
 #define ADIN3       0x10
 #define ADIN4       0x18
+#define ADVOID      0x81
 void spi_init(void);
+void spi_test(void);
 
 
 #endif

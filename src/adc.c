@@ -13,10 +13,23 @@
 #define WCOL        0x40
 void spi_init(void)
 {
-    SPCTL;//010?_1001
-    SPSTAT =SPIF | WCOL ; 
     SPDAT = 0;
-    AUXR1;
-
-
+    SPCTL = 0xd9;//0101_1001
+    SPSTAT =SPIF | WCOL ; 
+}
+void spi_test(void)
+{
+    unsigned int temp=0;
+    P12=0;
+	SPDAT=ADVOID;
+    while(!(SPSTAT&SPIF));
+    SPSTAT =SPIF | WCOL ; 
+    temp=SPDAT;
+    SPDAT = ADVOID; 
+    while(!(SPSTAT&SPIF));
+    SPSTAT =SPIF | WCOL ; 
+    temp <<=8;
+    temp +=SPDAT;
+    printf("data is %x\r\n",temp);
+    P12=1;
 }

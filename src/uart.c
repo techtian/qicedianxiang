@@ -81,7 +81,7 @@ void Uart2() interrupt 8 using 1
         receive_count++;
         if (receive_count==8)
         {
-            mputs(send_buff,NUM_SENDBYTES);
+            mputs(send_buff,MODBUSBYTESIZE);
 #ifdef __debug 
             //s1puts(receive_buff);
             //send_buff[30]={0x17,0x03,0x02,0x12,0x12,0x7d,0x2a};
